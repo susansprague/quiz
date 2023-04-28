@@ -88,16 +88,20 @@ function startQuiz() {
     quiz.style.display="block";
     //show quiz El
     //start timer
+    function timer() {
+        var sec = 75;
+        var timer = setInterval(function () {
+            document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
+            sec--;
+            if (sec < 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
     //show first question
     renderQuestion()
 }
 
-// render progress
-//function renderProgress() {
-    //for (let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
-      //  progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
-    //}
-//}
 
 // counter render
 
