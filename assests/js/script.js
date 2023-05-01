@@ -104,7 +104,15 @@ function startQuiz() {
 
 
 // counter render
-
+function endGame() {
+    alert("Wins: " + wins + '/nLosses: ' + losses + '/nTies: ' + ties);
+    play = confirm("Would you like to play again?");
+    if (play) {
+        startGame();
+    } else {
+        alert("Thanks for playing!");
+    }
+}
 
 
 // checkAnwer
